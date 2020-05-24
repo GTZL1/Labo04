@@ -151,7 +151,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Action.cpp" />
+    <ClCompile Include="Buffy.cpp" />
+    <ClCompile Include="Field.cpp" />
+    <ClCompile Include="Human.cpp" />
+    <ClCompile Include="Humanoid.cpp" />
     <ClCompile Include="Labo04.cpp" />
+    <ClCompile Include="Vampire.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Action.h" />
+    <ClInclude Include="Buffy.h" />
+    <ClInclude Include="Field.h" />
+    <ClInclude Include="Human.h" />
+    <ClInclude Include="Humanoid.h" />
+    <ClInclude Include="Vampire.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

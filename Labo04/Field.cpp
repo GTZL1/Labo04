@@ -35,6 +35,11 @@ void Field::populate(size_t nbVampires, size_t nbHumans)
 	humanoids.emplace_back(new Buffy(rand() % xSize, rand() % ySize));
 }
 
+void Field::addHumanoid(Humanoid* newHum)
+{
+	humanoids.push_back(newHum);
+}
+
 void Field::display()
 {
 	for (unsigned y = 0; y < ySize+2; ++y)
@@ -54,7 +59,11 @@ void Field::display()
 				{
 					if (h->getXPos() == x && h->getYPos() == y)
 					{
-						cout << (*h);
+						//if several on same square, only the first is displayed
+						if (!humanoidHere)
+						{
+							cout << (*h);
+						}
 						humanoidHere = true;
 					}
 				}
@@ -80,7 +89,7 @@ int Field::nextTurn()
 	// Executer les actions
 	for (list<Humanoid*>::iterator it = humanoids.begin(); it != humanoids.end(); it++)
 	{
-		//(*it)->executeAction(*this);
+		(*it)->executeAction(*this);
 	}	
 
 	// Enlever les humanoides tués
@@ -88,8 +97,8 @@ int Field::nextTurn()
 	{
 		if (!(*it)->isAlive())
 		{
-			it = humanoids.erase(it); // suppression de l’élément dans la liste
 			delete *it; // destruction de l’humanoide référencé
+			it = humanoids.erase(it); // suppression de l’élément dans la liste
 		}
 		else
 		{
@@ -100,26 +109,12 @@ int Field::nextTurn()
 	return turn++;
 }
 
-template<typename U>
-U* Field::findNearest(size_t x, size_t y)
+size_t Field::getDistance(int x0, int x1, int y0, int y1)
 {
-	unsigned short minDistance = -1;
-	U* nearest = nullptr;
-	for (U* h : humanoids)
-	{
-		unsigned short newDistance= getDistance(x, h->getXPos(), y, h->getYPos());
-		if (newDistance < minDistance)
-		{
-			minDistance = newDistance;
-			nearest = h;
-		}
-	}
-	return nullptr;
-}
-
-size_t Field::getDistance(size_t x0, size_t x1, size_t y0, size_t y1)
-{
-	return (x1 - x0) + (y1 - y0);
+	size_t a= floor(sqrt(pow(abs(x1 - x0), 2) + pow(abs(y1 - y0), 2)));
+	//cout << a << endl;
+	return a;
+	//return (x1 - x0) + (y1 - y0);
 }
 
 Field::~Field()

@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Action.cpp" />
+    <ClCompile Include="ActionMoveRandom.cpp" />
     <ClCompile Include="Buffy.cpp" />
     <ClCompile Include="Field.cpp" />
     <ClCompile Include="Human.cpp" />
@@ -161,6 +162,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Action.h" />
+    <ClInclude Include="ActionKill.h" />
+    <ClInclude Include="ActionMoveRandom.h" />
+    <ClInclude Include="ActionMoveTo.h" />
+    <ClInclude Include="ActionNewVampire.h" />
     <ClInclude Include="Buffy.h" />
     <ClInclude Include="Field.h" />
     <ClInclude Include="Human.h" />

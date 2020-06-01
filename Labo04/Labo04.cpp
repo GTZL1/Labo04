@@ -9,9 +9,14 @@
 
 int main()
 {
-	Field mainField(50,50);
-	mainField.populate(10, 20);
+	Field mainField(30,30);
+	mainField.populate(5, 10);
 	mainField.display();
-
+	for (short x = 0; x < 20; ++x)
+	{
+		mainField.nextTurn();
+		mainField.display();
+	}
+	
 	system("pause");
 }

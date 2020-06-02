@@ -40,6 +40,26 @@ void Field::addHumanoid(Humanoid* newHum)
 	humanoids.push_back(newHum);
 }
 
+void Field::clearContent()
+{
+	for (Humanoid* h : humanoids)
+	{
+		delete h;
+	}
+	humanoids.clear();
+	turn = 0;
+}
+
+size_t Field::getXSize()
+{
+	return xSize;
+}
+
+size_t Field::getYSize()
+{
+	return ySize;
+}
+
 void Field::display()
 {
 	for (unsigned y = 0; y < ySize+2; ++y)
@@ -111,10 +131,7 @@ int Field::nextTurn()
 
 size_t Field::getDistance(int x0, int x1, int y0, int y1)
 {
-	size_t a= floor(sqrt(pow(abs(x1 - x0), 2) + pow(abs(y1 - y0), 2)));
-	//cout << a << endl;
-	return a;
-	//return (x1 - x0) + (y1 - y0);
+	return floor(sqrt(pow(abs(x1 - x0), 2) + pow(abs(y1 - y0), 2)));
 }
 
 Field::~Field()

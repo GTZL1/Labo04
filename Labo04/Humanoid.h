@@ -29,9 +29,6 @@ public:
 	virtual void killIt();
 	virtual std::string toString() const;
 	virtual char getLetter() const=0;
-	virtual ~Humanoid()
-	{
-		delete action;
-	}
+	virtual ~Humanoid();
 };
 

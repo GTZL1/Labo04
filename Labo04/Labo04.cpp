@@ -2,21 +2,15 @@
 //
 
 #include <iostream>
+#include <string>
 
-#include "Field.h"
-#include "Humanoid.h"
+#include "GameMaster.h"
 
+using namespace std;
 
 int main()
 {
-	Field mainField(30,30);
-	mainField.populate(5, 10);
-	mainField.display();
-	for (short x = 0; x < 20; ++x)
-	{
-		mainField.nextTurn();
-		mainField.display();
-	}
-	
-	system("pause");
+	Field mainField(50,50);
+	GameMaster gameMaster;
+	gameMaster.runGame(mainField,10,20);
 }

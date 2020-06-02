@@ -10,8 +10,9 @@
 class Field
 {
 	const char delimiterVertical = '|';
-	const char delimiterHorizontal = '_';
+	const char delimiterHorizontal = '-';
 	const char edgeChar = '*';
+
 	size_t xSize, ySize;
 	std::list<Humanoid*> humanoids;
 	size_t turn = 0;
@@ -21,6 +22,9 @@ public:
 	Field(size_t, size_t);
 	void populate(size_t, size_t);
 	void addHumanoid(Humanoid*);
+	void clearContent();
+	size_t getXSize();
+	size_t getYSize();
 	void display();
 	int nextTurn();
 	template <typename U>

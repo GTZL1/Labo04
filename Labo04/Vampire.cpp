@@ -14,7 +14,7 @@ void Vampire::setAction(Field& f)
 
 	if (nearest == nullptr)
 	{
-		//do nothing
+		action = nullptr;
 	}
 	else if (f.getDistance(xPos, nearest->getXPos(), yPos, nearest->getYPos())<=Vampire::HUNTING_RANGE)
 	{

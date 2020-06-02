@@ -48,7 +48,7 @@ void Humanoid::setAction(Field& f)
 void Humanoid::executeAction(Field& f)
 {
 	//when a new Vampire is created from an human, it doesn't have an action
-	//it's the only case with a nullptr at action execution
+	//also when there are no more humans, vampires don't move anymore
 	if (action != nullptr)
 	{
 		action->execute(f);
@@ -65,10 +65,10 @@ std::string Humanoid::toString() const
 	return string(1, getLetter());
 }
 
-//char Humanoid::getLetter() const
-//{
-//	return this->LETTER;
-//}
+Humanoid::~Humanoid()
+{
+	delete action;
+}
 
 std::ostream & operator<<(std::ostream& os, Humanoid& h)
 {

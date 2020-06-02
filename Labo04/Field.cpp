@@ -98,7 +98,7 @@ void Field::display()
 	}
 }
 
-int Field::nextTurn()
+size_t Field::nextTurn()
 {
 	// Déterminer les prochaines actions
 	for (list<Humanoid*>::iterator it = humanoids.begin(); it != humanoids.end(); it++)
@@ -131,7 +131,7 @@ int Field::nextTurn()
 
 size_t Field::getDistance(int x0, int x1, int y0, int y1)
 {
-	return ceil(sqrt(pow(abs(x1 - x0), 2) + pow(abs(y1 - y0), 2)));
+	return max(abs(x0 - x1), abs(y0 - y1));
 }
 
 Field::~Field()

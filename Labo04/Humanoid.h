@@ -10,10 +10,8 @@ std::ostream& operator<<(std::ostream&, Humanoid&);
 
 class Humanoid
 {
-	
 	bool alive = true;
 protected:
-	//static const char LETTER;
 	size_t xPos, yPos;
 	Action* action = nullptr;
 public:

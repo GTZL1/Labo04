@@ -32,6 +32,7 @@ void Buffy::setAction(Field& f)
 
 void Buffy::executeAction(Field& f)
 {
+	//a move action is executed twice, so Buffy moves forward 2 squares
 	Humanoid::executeAction(f);
 	Humanoid::executeAction(f);
 }

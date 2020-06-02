@@ -9,7 +9,7 @@
 
 class GameMaster
 {
-	const std::string QUIT_COMMAND = "uits";
+	const std::string QUIT_COMMAND = "uit";
 	const std::string NEXT_COMMAND = "ext";
 	const std::string STATS_COMMAND = "tats";
 	static const char PROMPT_CHAR = '>';
@@ -45,7 +45,7 @@ class GameMaster
 				++buffyVictories;
 			}
 		}
-
+		
 		return ((buffyVictories / NB_TESTS)*100.0);
 	}
 

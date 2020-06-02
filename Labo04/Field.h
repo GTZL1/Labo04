@@ -26,9 +26,21 @@ public:
 	size_t getXSize();
 	size_t getYSize();
 	void display();
-	int nextTurn();
+	size_t nextTurn();
 	template <typename U>
 	Humanoid* findNearest(size_t, size_t);
+
+	/*!
+	 * 
+	 * int params are necessary because function uses abs()
+	 * which cannot work with size_t
+	 * 
+	 * \param 
+	 * \param 
+	 * \param 
+	 * \param 
+	 * \return 
+	 */
 	size_t getDistance(int, int, int, int);
 	~Field();
 };
@@ -36,13 +48,13 @@ public:
 template <typename U>
 Humanoid* Field::findNearest(size_t x, size_t y)
 {
-	unsigned short minDistance = -1;
+	size_t minDistance = -1;
 	Humanoid* nearest = nullptr;
 	for (Humanoid* h : humanoids)
 	{
 		if (h->getLetter() == U::LETTER)
 		{
-			unsigned short newDistance = this->getDistance(x, h->getXPos(), y, h->getYPos());
+			size_t newDistance = this->getDistance(x, h->getXPos(), y, h->getYPos());
 			if (newDistance < minDistance)
 			{
 				minDistance = newDistance;

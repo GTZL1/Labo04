@@ -131,7 +131,7 @@ int Field::nextTurn()
 
 size_t Field::getDistance(int x0, int x1, int y0, int y1)
 {
-	return floor(sqrt(pow(abs(x1 - x0), 2) + pow(abs(y1 - y0), 2)));
+	return ceil(sqrt(pow(abs(x1 - x0), 2) + pow(abs(y1 - y0), 2)));
 }
 
 Field::~Field()

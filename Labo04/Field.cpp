@@ -62,40 +62,34 @@ size_t Field::getYSize()
 
 void Field::display()
 {
-	for (unsigned y = 0; y < ySize+2; ++y)
+	cout << firstAndBottomLine() << endl;
+	for (unsigned y = 0; y < ySize; ++y)
 	{
-		if (!y || y == (xSize + 1))
-		{
-			cout << firstAndBottomLine() << endl;
-			continue;
-		}
-		else
-		{
-			cout << delimiterVertical;
-			for (unsigned x = 0; x < xSize; ++x)
-			{			
-				bool humanoidHere = false;
-				for (Humanoid* h : humanoids)
+		cout << delimiterVertical;
+		for (unsigned x = 0; x < xSize; ++x)
+		{			
+			bool humanoidHere = false;
+			for (Humanoid* h : humanoids)
+			{
+				if (h->getXPos() == x && h->getYPos() == y)
 				{
-					if (h->getXPos() == x && h->getYPos() == y)
+					//if several on same square, only the first is displayed
+					if (!humanoidHere)
 					{
-						//if several on same square, only the first is displayed
-						if (!humanoidHere)
-						{
-							cout << (*h);
-						}
-						humanoidHere = true;
+						cout << (*h);
 					}
+					humanoidHere = true;
 				}
-
-				if (!humanoidHere)
-				{
-					cout << ' ';
-				}	
 			}
-			cout << delimiterVertical << endl;
+
+			if (!humanoidHere)
+			{
+				cout << ' ';
+			}	
 		}
+		cout << delimiterVertical << endl;
 	}
+	cout << firstAndBottomLine() << endl;
 }
 
 size_t Field::nextTurn()

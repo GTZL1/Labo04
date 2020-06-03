@@ -10,7 +10,7 @@ using namespace std;
 
 int main()
 {
-	Field mainField(50,50);
-	GameMaster gameMaster;
-	gameMaster.runGame(mainField,10,20);
+	Field mainField(50, 50);
+	GameMaster gameMaster(10000.0);
+	gameMaster.runGame(mainField, 10, 20);
 }

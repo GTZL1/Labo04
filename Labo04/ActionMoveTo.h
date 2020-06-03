@@ -4,8 +4,20 @@ class ActionMoveTo :
 	public Action
 {
 public:
+	/*!
+	 * Standard constructor for ActionMoveTo
+	 *
+	 * \param hum pointer to humanoid to move
+	 * \param x coordinate to go to
+	 * \param y coordinate to go to
+	 */
 	ActionMoveTo(Humanoid* hum, size_t xTo, size_t yTo) :Action(hum, xTo, yTo){}
 
+	/*!
+	 * Execute movement of 1 square to the (xTo, yTo) point
+	 * 
+	 * \param f game field
+	 */
 	void execute(Field& f)
 	{
 		if (xTo < humanoid->getXPos())

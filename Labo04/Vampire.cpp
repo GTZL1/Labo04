@@ -10,13 +10,13 @@ void Vampire::setAction(Field& f)
 	srand((unsigned)time(0));
 	Humanoid::setAction(f);
 	
-	Humanoid* nearest = f.findNearest<Human>(this->xPos, this->yPos);
+	Humanoid* nearest = f.findNearest<Human>(this->getXPos(), this->getYPos());
 
 	if (nearest == nullptr)
 	{
 		action = nullptr;
 	}
-	else if (f.getDistance(xPos, nearest->getXPos(), yPos, nearest->getYPos())<=Vampire::HUNTING_RANGE)
+	else if (f.getDistance(this->getXPos(), nearest->getXPos(), this->getYPos(), nearest->getYPos())<=Vampire::HUNTING_RANGE)
 	{
 		if (rand() % 2)
 		{

@@ -14,13 +14,13 @@ void Buffy::setAction(Field& f)
 {
 	Humanoid::setAction(f);
 
-	Humanoid* nearest = f.findNearest<Vampire>(this->xPos, this->yPos);
+	Humanoid* nearest = f.findNearest<Vampire>(this->getXPos(), this->getYPos());
 
 	if (nearest == nullptr)
 	{
 		action = new ActionMoveRandom(this);
 	}
-	else if (f.getDistance(xPos, nearest->getXPos(), yPos, nearest->getYPos()) <= Buffy::HUNTING_RANGE)
+	else if (f.getDistance(this->getXPos(), nearest->getXPos(), this->getYPos(), nearest->getYPos()) <= Buffy::HUNTING_RANGE)
 	{
 		action = new ActionKill(nearest);
 	}

@@ -11,7 +11,26 @@ class Vampire :	public Humanoid
 	
 public:
 	static const char LETTER = 'V';
+
+	/*!
+	 * Standard constructor
+	 *
+	 * \param xPos x start position
+	 * \param yPos y start position
+	 */
 	Vampire(size_t xPos, size_t yPos) :Humanoid(xPos, yPos) {}
-	void setAction(Field&);
+
+	/*!
+	 * Get class symbol
+	 *
+	 * \return class symbol letter
+	 */
 	char getLetter() const;
+
+	/*!
+	 * According to field state, determine the next action for current Vampire
+	 *
+	 * \param game Field
+	 */
+	void setAction(Field&);
 };

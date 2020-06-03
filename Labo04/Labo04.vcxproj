@@ -155,6 +155,7 @@
     <ClCompile Include="ActionMoveRandom.cpp" />
     <ClCompile Include="Buffy.cpp" />
     <ClCompile Include="Field.cpp" />
+    <ClCompile Include="GameMaster.cpp" />
     <ClCompile Include="Human.cpp" />
     <ClCompile Include="Humanoid.cpp" />
     <ClCompile Include="Labo04.cpp" />

@@ -6,26 +6,23 @@
 
 using namespace std;
 
-Humanoid::Humanoid()
-{}
-
 Humanoid::Humanoid(size_t x, size_t y)
 {
 	xPos = x;
 	yPos = y;
 }
 
-bool Humanoid::isAlive()
+bool Humanoid::isAlive() const
 {
 	return alive;
 }
 
-size_t Humanoid::getXPos()
+size_t Humanoid::getXPos() const
 {
 	return xPos;
 }
 
-size_t Humanoid::getYPos()
+size_t Humanoid::getYPos() const
 {
 	return yPos;
 }

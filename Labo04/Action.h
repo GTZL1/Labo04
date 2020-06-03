@@ -1,5 +1,16 @@
+/* -------------------------------------------------------------------
+ * File: Action.h
+ *
+ * Authors: David Dupraz, Soulaymane Lamrani, Alexandre Simik
+ *
+ * Content: header of Action class
+ *
+ * Implemented inline to limit number of files, this class being very small
+ *
+ * ------------------------------------------------------------------ */
 #pragma once
 #include <time.h>
+
 #include "Humanoid.h"
 #include "Field.h"
 

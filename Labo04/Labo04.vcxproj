@@ -151,14 +151,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Action.cpp" />
-    <ClCompile Include="ActionMoveRandom.cpp" />
     <ClCompile Include="Buffy.cpp" />
     <ClCompile Include="Field.cpp" />
     <ClCompile Include="GameMaster.cpp" />
     <ClCompile Include="Human.cpp" />
     <ClCompile Include="Humanoid.cpp" />
-    <ClCompile Include="Labo04.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Vampire.cpp" />
   </ItemGroup>
   <ItemGroup>

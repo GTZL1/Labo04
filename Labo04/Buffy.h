@@ -1,5 +1,19 @@
+/* -------------------------------------------------------------------
+ * File: Buffy.h
+ *
+ * Authors: David Dupraz, Soulaymane Lamrani, Alexandre Simik
+ *
+ * Content: header of Buffy class
+ *
+ * ------------------------------------------------------------------ */
 #pragma once
 #include "Humanoid.h"
+#include "Vampire.h"
+#include "Action.h"
+#include "ActionKill.h"
+#include "ActionMoveRandom.h"
+#include "ActionMoveTo.h"
+
 class Vampire;
 
 class Buffy : public Humanoid

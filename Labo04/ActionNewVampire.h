@@ -1,8 +1,17 @@
+/* -------------------------------------------------------------------
+ * File: ActionNewVampire.h
+ *
+ * Authors: David Dupraz, Soulaymane Lamrani, Alexandre Simik
+ *
+ * Content: header of ActionNewVampire class
+ *
+ * Implemented inline to limit number of files, this class being very small
+ *
+ * ------------------------------------------------------------------ */
 #pragma once
 #include "Action.h"
 #include "Field.h"
 #include "Vampire.h"
-
 
 class ActionNewVampire :
 	public Action

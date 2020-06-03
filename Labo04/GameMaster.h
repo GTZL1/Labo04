@@ -1,4 +1,11 @@
-
+/* -------------------------------------------------------------------
+ * File: GameMaster.h
+ *
+ * Authors: David Dupraz, Soulaymane Lamrani, Alexandre Simik
+ *
+ * Content: header of GameMaster class
+ *
+ * ------------------------------------------------------------------ */
 #pragma once
 #include <iostream>
 #include <string>

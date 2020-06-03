@@ -1,5 +1,14 @@
+/* -------------------------------------------------------------------
+ * File: Vampire.h
+ *
+ * Authors: David Dupraz, Soulaymane Lamrani, Alexandre Simik
+ *
+ * Content: header of Vampire class
+ *
+ * ------------------------------------------------------------------ */
 #pragma once
 #include <random>
+
 #include "Humanoid.h"
 #include "Field.h"
 

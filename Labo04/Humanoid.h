@@ -1,3 +1,11 @@
+/* -------------------------------------------------------------------
+ * File: Humanoid.h
+ *
+ * Authors: David Dupraz, Soulaymane Lamrani, Alexandre Simik
+ *
+ * Content: header of Humanoid class
+ *
+ * ------------------------------------------------------------------ */
 #pragma once
 #include <string>
 #include <random>

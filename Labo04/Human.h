@@ -1,3 +1,11 @@
+/* -------------------------------------------------------------------
+ * File: Human.h
+ *
+ * Authors: David Dupraz, Soulaymane Lamrani, Alexandre Simik
+ *
+ * Content: header of Human class
+ *
+ * ------------------------------------------------------------------ */
 #pragma once
 #include "Humanoid.h"
 class Human : public Humanoid

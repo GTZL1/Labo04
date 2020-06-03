@@ -1,3 +1,11 @@
+/* -------------------------------------------------------------------
+ * File: Vampire.cpp
+ *
+ * Authors: David Dupraz, Soulaymane Lamrani, Alexandre Simik
+ *
+ * Content: implementation of Vampire class
+ *
+ * ------------------------------------------------------------------ */
 #include "Vampire.h"
 #include "Human.h"
 #include "Action.h"

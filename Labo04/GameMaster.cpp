@@ -1,3 +1,11 @@
+/* -------------------------------------------------------------------
+ * File: GameMaster.cpp
+ *
+ * Authors: David Dupraz, Soulaymane Lamrani, Alexandre Simik
+ *
+ * Content: implementation of GameMaster class
+ *
+ * ------------------------------------------------------------------ */
 #pragma once
 #include "GameMaster.h"
 

@@ -1,9 +1,12 @@
+/* -------------------------------------------------------------------
+ * File: Buffy.cpp
+ *
+ * Authors: David Dupraz, Soulaymane Lamrani, Alexandre Simik
+ *
+ * Content: implementation of Buffy class
+ *
+ * ------------------------------------------------------------------ */
 #include "Buffy.h"
-#include "Vampire.h"
-#include "Action.h"
-#include "ActionKill.h"
-#include "ActionMoveRandom.h"
-#include "ActionMoveTo.h"
 
 char Buffy::getLetter() const
 {

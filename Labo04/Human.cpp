@@ -1,3 +1,11 @@
+/* -------------------------------------------------------------------
+ * File: Human.cpp
+ *
+ * Authors: David Dupraz, Soulaymane Lamrani, Alexandre Simik
+ *
+ * Content: implementation of Human class
+ *
+ * ------------------------------------------------------------------ */
 #include "Human.h"
 #include "Action.h"
 #include "ActionMoveRandom.h"

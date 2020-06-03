@@ -1,3 +1,12 @@
+/* -------------------------------------------------------------------
+ * File: Humanoid.cpp
+ *
+ * Authors: David Dupraz, Soulaymane Lamrani, Alexandre Simik
+ *
+ * Content: implementation of Humanoid class
+ *
+ * ------------------------------------------------------------------ */
+
 #include "Humanoid.h"
 #include "Action.h"
 #include "ActionKill.h"

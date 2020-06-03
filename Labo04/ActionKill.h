@@ -1,5 +1,16 @@
+/* -------------------------------------------------------------------
+ * File: ActionKill.h
+ *
+ * Authors: David Dupraz, Soulaymane Lamrani, Alexandre Simik
+ *
+ * Content: header of ActionKill class
+ * 
+ * Implemented inline to limit number of files, this class being very small
+ *
+ * ------------------------------------------------------------------ */
 #pragma once
 #include "Action.h"
+
 class ActionKill :
 	public Action
 {

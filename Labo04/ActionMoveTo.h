@@ -1,5 +1,16 @@
+/* -------------------------------------------------------------------
+ * File: ActionMoveTo.h
+ *
+ * Authors: David Dupraz, Soulaymane Lamrani, Alexandre Simik
+ *
+ * Content: header of ActionMoveTo class
+ *
+ * Implemented inline to limit number of files, this class being very small
+ *
+ * ------------------------------------------------------------------ */
 #pragma once
 #include "Action.h"
+
 class ActionMoveTo :
 	public Action
 {

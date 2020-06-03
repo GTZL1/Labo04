@@ -1,3 +1,13 @@
+/* -------------------------------------------------------------------
+ * File: ActionMoveRandom.h
+ *
+ * Authors: David Dupraz, Soulaymane Lamrani, Alexandre Simik
+ *
+ * Content: header of ActionMoveRandom class
+ *
+ * Implemented inline to limit number of files, this class being very small
+ *
+ * ------------------------------------------------------------------ */
 #pragma once
 #include "Action.h"
 

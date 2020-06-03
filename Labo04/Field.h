@@ -1,3 +1,11 @@
+/* -------------------------------------------------------------------
+ * File: Field.h
+ *
+ * Authors: David Dupraz, Soulaymane Lamrani, Alexandre Simik
+ *
+ * Content: header of Field class
+ *
+ * ------------------------------------------------------------------ */
 #pragma once
 #include <vector>
 #include <list>

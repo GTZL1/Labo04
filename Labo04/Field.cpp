@@ -1,5 +1,12 @@
+/* -------------------------------------------------------------------
+ * File: Field.cpp
+ *
+ * Authors: David Dupraz, Soulaymane Lamrani, Alexandre Simik
+ *
+ * Content: implementation of Field class
+ *
+ * ------------------------------------------------------------------ */
 #include "Field.h"
-#include "Humanoid.h"
 #include "Vampire.h"
 #include "Human.h"
 #include "Buffy.h"

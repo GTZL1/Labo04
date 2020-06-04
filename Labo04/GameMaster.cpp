@@ -46,7 +46,7 @@ void GameMaster::runGame(Field& mainField, size_t nbVampires, size_t nbHumans)
 {
 	mainField.populate(nbVampires, nbHumans);
 
-	while (1)
+	while (true)
 	{
 		mainField.display();
 

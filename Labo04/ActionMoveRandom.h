@@ -21,14 +21,14 @@ public:
 	 * 
 	 * \param hum pointer to humanoid to move
 	 */
-	ActionMoveRandom(Humanoid* hum) :Action(hum, 0, 0){}
+	 explicit ActionMoveRandom(Humanoid* hum) :Action(hum, 0, 0){}
 
 	/*!
 	 * Execute a random movement of 1 square
 	 * 
 	 * \param f current game field
 	 */
-	void execute(Field& f)
+	void execute(Field& f) override
 	{
 		srand((unsigned)time(0));
 		if (rand() % 2)

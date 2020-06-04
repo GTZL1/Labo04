@@ -9,7 +9,7 @@
  *
  * ------------------------------------------------------------------ */
 #pragma once
-#include <time.h>
+#include <ctime>
 
 #include "Humanoid.h"
 #include "Field.h"

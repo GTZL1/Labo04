@@ -29,7 +29,7 @@ public:
 	 * 
 	 * \param f game field
 	 */
-	void execute(Field& f)
+	void execute(Field& f) override
 	{
 		if (xTo < humanoid->getXPos())
 		{

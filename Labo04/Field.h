@@ -10,8 +10,8 @@
 #include <vector>
 #include <list>
 #include <random>
-#include <time.h>
-#include <math.h>
+#include <ctime>
+#include <cmath>
 
 #include "Humanoid.h"
 

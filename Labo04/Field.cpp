@@ -15,7 +15,7 @@ using namespace std;
 
 std::string Field::firstAndBottomLine()
 {
-	std::string result = "";
+	std::string result;
 	result += edgeChar;
 	for (unsigned x = 0; x < xSize; ++x)
 	{
@@ -101,7 +101,7 @@ void Field::display()
 
 size_t Field::nextTurn()
 {
-	// Déterminer les prochaines actions
+	// Dï¿½terminer les prochaines actions
 	for (list<Humanoid*>::iterator it = humanoids.begin(); it != humanoids.end(); it++)
 	{
 		(*it)->setAction(*this);
@@ -113,13 +113,13 @@ size_t Field::nextTurn()
 		(*it)->executeAction(*this);
 	}	
 
-	// Enlever les humanoides tués
+	// Enlever les humanoides tuï¿½s
 	for (list<Humanoid*>::iterator it = humanoids.begin(); it != humanoids.end(); )
 	{
 		if (!(*it)->isAlive())
 		{
-			delete *it; // destruction de l’humanoide référencé
-			it = humanoids.erase(it); // suppression de l’élément dans la liste
+			delete *it; // destruction de lï¿½humanoide rï¿½fï¿½rencï¿½
+			it = humanoids.erase(it); // suppression de lï¿½ï¿½lï¿½ment dans la liste
 		}
 		else
 		{

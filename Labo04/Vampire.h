@@ -34,12 +34,12 @@ public:
 	 *
 	 * \return class symbol letter
 	 */
-	char getLetter() const;
+	char getLetter() const override;
 
 	/*!
 	 * According to field state, determine the next action for current Vampire
 	 *
 	 * \param game Field
 	 */
-	void setAction(Field&);
+	void setAction(Field&) override;
 };

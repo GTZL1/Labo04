@@ -23,14 +23,14 @@ public:
 	 *
 	 * \param hum pointer to humanoid to transform into vampire
 	 */
-	ActionNewVampire(Humanoid* hum): Action(hum,0,0){}
+	explicit ActionNewVampire(Humanoid* hum): Action(hum,0,0){}
 
 	/*!
 	 * Execute the action: designated humanoid is killed and a new vampire takes his place
 	 * 
 	 * \param f game field
 	 */
-	void execute(Field& f)
+	void execute(Field& f) override
 	{
 		f.addHumanoid(new Vampire(humanoid->getXPos(), humanoid->getYPos()));
 		humanoid->killIt();

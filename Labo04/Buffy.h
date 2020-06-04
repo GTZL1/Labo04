@@ -34,14 +34,14 @@ public:
 	 *
 	 * \return class symbol letter
 	 */
-	char getLetter() const;
+	char getLetter() const override;
 
 	/*!
 	 * According to field state, determine the next action for current Buffy
 	 *
 	 * \param game Field
 	 */
-	void setAction(Field&);
+	void setAction(Field&) override;
 
 	/*!
 	 * Execute action
@@ -49,6 +49,6 @@ public:
 	 * 
 	 * \param game field
 	 */
-	void executeAction(Field&);
+	void executeAction(Field&) override;
 };
 

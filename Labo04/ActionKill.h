@@ -21,14 +21,14 @@ public:
 	 *
 	 * \param hum pointer to humanoid to kill
 	 */
-	ActionKill(Humanoid* hum) :Action(hum, 0, 0) {}
+	explicit ActionKill(Humanoid* hum) :Action(hum, 0, 0) {}
 
 	/*!
 	 * Execute the action: designated humanoid is killed
 	 * 
 	 * \param f game field
 	 */
-	void execute(Field& f)
+	void execute(Field& f) override
 	{
 		humanoid->killIt();
 	}

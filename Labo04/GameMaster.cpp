@@ -18,8 +18,8 @@ void GameMaster::displayPrompt(size_t turn)
 size_t GameMaster::runMultipleGames(size_t nbVampires, size_t nbHumans, size_t xFieldSize, size_t yFieldSize)
 {
 	Field field(xFieldSize, yFieldSize);
-	double buffyVictories = 0;
-	for (double x = 0; x < NB_TESTS; ++x)
+	size_t buffyVictories = 0;
+	for (size_t x = 0; x < NB_TESTS; ++x)
 	{
 		field.clearContent();
 		field.populate(nbVampires, nbHumans);
@@ -36,10 +36,10 @@ size_t GameMaster::runMultipleGames(size_t nbVampires, size_t nbHumans, size_t x
 		}
 	}
 
-	return ((buffyVictories / NB_TESTS)*100.0);
+	return (((double)buffyVictories / (double)NB_TESTS)*100.0);
 }
 
-GameMaster::GameMaster(double nbTests): NB_TESTS(nbTests)
+GameMaster::GameMaster(size_t nbTests): NB_TESTS(nbTests)
 {}
 
 void GameMaster::runGame(Field& mainField, size_t nbVampires, size_t nbHumans)

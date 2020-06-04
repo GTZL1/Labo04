@@ -24,7 +24,7 @@ class GameMaster
 	static const char QUIT_CHAR = 'q';
 	static const char NXT_CHAR = 'n';
 	static const char STATS_CHAR = 's';
-	const double NB_TESTS;
+	const size_t NB_TESTS;
 
 	/*!
 	 * Display the prompt with current turn number and possible commands
@@ -50,7 +50,7 @@ public:
 	 * 
 	 * \param number of tests to do. Type is double for calcul precision
 	 */
-	GameMaster(double);
+	GameMaster(size_t);
 
 	/*!
 	 * Run an iteration of the game and display each turn
